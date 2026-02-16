@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Villa Vilekula — Начало</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER / NAV -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a class="brand" href="#home" aria-label="Villa Vilekula">
+        <div class="brand-title">VILLA VILEKULA</div>
+        <div class="brand-sub">MOUNTAIN • SPA • BBQ</div>
+      </a>
+
+      <nav class="nav" aria-label="Основна навигация">
+        <a class="nav-link is-active" href="#home">Начало</a>
+
+        <div class="nav-dropdown" data-dropdown>
+          <button class="nav-link nav-link-btn" type="button" aria-haspopup="true" aria-expanded="false">
+            Настаняване <span class="caret">▾</span>
+          </button>
+          <div class="dropdown-panel" role="menu">
+            <!-- важно: href="#stay" + data-stay-go -->
+            <a role="menuitem" href="#stay" class="dropdown-item" data-stay-go="0">Вилата</a>
+            <a role="menuitem" href="#stay" class="dropdown-item" data-stay-go="1">Стаи &amp; Удобства</a>
+            <a role="menuitem" href="#stay" class="dropdown-item" data-stay-go="2">Цени</a>
+            <a role="menuitem" href="#stay" class="dropdown-item" data-stay-go="3">Правила</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="#spa">Спа</a>
+
+        <div class="nav-dropdown" data-dropdown>
+          <button class="nav-link nav-link-btn" type="button" aria-haspopup="true" aria-expanded="false">
+            Преживявания <span class="caret">▾</span>
+          </button>
+          <div class="dropdown-panel" role="menu">
+            <a role="menuitem" href="#bbq" class="dropdown-item">BBQ зона</a>
+            <a role="menuitem" href="#pool" class="dropdown-item">Басейн</a>
+            <a role="menuitem" href="#trips" class="dropdown-item">Разходки</a>
+            <a role="menuitem" href="#kids" class="dropdown-item">Детски кът</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="#gallery">Галерия</a>
+        <a class="nav-link" href="#location">Локация</a>
+        <a class="nav-link" href="#contact">Контакти</a>
+      </nav>
+
+      <a class="nav-cta" href="#booking">Запази дати</a>
+
+      <!-- Burger -->
+      <button class="burger" id="burgerBtn" type="button" aria-label="Отвори меню" aria-controls="offcanvas" aria-expanded="false">
+        <span class="burger-ic" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- OFFCANVAS + OVERLAY -->
+  <div class="overlay" id="menuOverlay" hidden></div>
+
+  <aside class="offcanvas" id="offcanvas" aria-label="Меню" aria-hidden="true">
+    <div class="offcanvas-top">
+      <div class="offcanvas-brand">
+        <div class="offcanvas-title">VILLA VILEKULA</div>
+        <div class="offcanvas-sub">Бъди наш гост</div>
+      </div>
+
+      <button class="offcanvas-close" id="closeMenuBtn" type="button" aria-label="Затвори меню">
+        ✕
+      </button>
+    </div>
+
+    <nav class="offcanvas-nav" aria-label="Мобилна навигация">
+      <a href="#home" class="m-link">Начало</a>
+
+      <details class="m-details">
+        <summary><span>Настаняване</span></summary>
+
+        <!-- важно: href="#stay" + data-stay-go -->
+        <a href="#stay" class="m-sublink" data-stay-go="0">Вилата</a>
+        <a href="#stay" class="m-sublink" data-stay-go="1">Стаи &amp; Удобства</a>
+        <a href="#stay" class="m-sublink" data-stay-go="2">Цени</a>
+        <a href="#stay" class="m-sublink" data-stay-go="3">Правила</a>
+      </details>
+
+      <a href="#spa" class="m-link">Спа</a>
+
+      <details class="m-details">
+        <summary><span>Преживявания</span></summary>
+        <a href="#bbq" class="m-sublink">BBQ зона</a>
+        <a href="#pool" class="m-sublink">Басейн</a>
+        <a href="#trips" class="m-sublink">Разходки</a>
+        <a href="#kids" class="m-sublink">Детски кът</a>
+      </details>
+
+      <a href="#gallery" class="m-link">Галерия</a>
+      <a href="#location" class="m-link">Локация</a>
+      <a href="#contact" class="m-link">Контакти</a>
+
+      <a href="#booking" class="m-cta">Запази дати</a>
+    </nav>
+
+    <div class="offcanvas-footer">
+      <div class="offcanvas-note">Топли цветове • планински уют • тишина</div>
+    </div>
+  </aside>
+
+  <!-- HERO / SLIDER -->
+  <main id="home">
+    <section class="hero" aria-label="Начална секция">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-overlay"></div>
+
+        <button class="nav-arrow left" type="button" aria-label="Предишен слайд" data-prev>
+          <span>‹</span>
+        </button>
+        <button class="nav-arrow right" type="button" aria-label="Следващ слайд" data-next>
+          <span>›</span>
+        </button>
+
+        <div class="hero-content">
+          <div class="hero-kicker" id="heroKicker">
+            <span class="k-line"></span>
+            <span class="k-text">ПЛАНИНСКИ УЮТ И СПОКОЙСТВИЕ</span>
+          </div>
+
+          <h1 class="hero-title" id="heroTitle">VILLA<br />VILEKULA</h1>
+
+          <div class="hero-subtitle">
+            <div id="heroLine1">Топлина, дърво и гледки към гората</div>
+            <div id="heroLine2">с място за хора, които обичат тишината</div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-light" id="primaryCta" href="#booking">
+              Запази дати <span class="btn-ic">▶</span>
+            </a>
+            <a class="btn btn-ghost" id="secondaryCta" href="#gallery">
+              Виж снимки
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+          <div class="progress">
+            <div class="bars" id="progressBars" aria-hidden="true">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <div class="counter" id="progressCounter">01/03</div>
+          </div>
+        </div>
+
+        <aside class="hero-stat" aria-label="Информация">
+          <div class="stat-value" id="statValue">—</div>
+          <div class="stat-meta">
+            <div class="stat-unit" id="statUnit">МИНУТИ</div>
+            <div class="stat-label" id="statLabel">ДО ПРИРОДНА ПЪТЕКА</div>
+          </div>
+        </aside>
+
+        <div class="lead-ring" aria-label="Скролни надолу">
+          <svg viewBox="0 0 100 100" class="lead-ring__svg" aria-hidden="true">
+            <defs>
+              <path id="leadCirclePath"
+                d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+            </defs>
+            <text font-size="8.5">
+              <textPath href="#leadCirclePath">
+                БЪДИ НАШ ГОСТ • VILLA VILEKULA
+              </textPath>
+            </text>
+          </svg>
+
+          <!-- към stay + вилата по default -->
+          <a href="#stay" class="lead-ring__down" aria-label="Към следващата секция" data-stay-go="0">
+            <span class="lead-ring__chev">⌄</span>
+          </a>
+        </div>
+
+        <div class="hero-social" aria-label="Социални линкове">
+          <a class="hero-social__btn" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13.5 22v-8h2.7l.4-3H13.5V9.1c0-.9.3-1.6 1.6-1.6H16.8V4.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V11H7.5v3h2.6v8h3.4z"/>
+            </svg>
+          </a>
+
+          <a class="hero-social__btn" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm9 2h-9A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9A3.5 3.5 0 0 0 20 16.5v-9A3.5 3.5 0 0 0 16.5 4zm-4.5 3.3A4.7 4.7 0 1 1 7.3 12 4.7 4.7 0 0 1 12 7.3zm0 2A2.7 2.7 0 1 0 14.7 12 2.7 2.7 0 0 0 12 9.3zM17.6 6.6a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+            </svg>
+          </a>
+
+          <a class="hero-social__btn" href="mailto:your@email.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCOMMODATION -->
+    <section class="section section-accommodation" id="stay" aria-label="Настаняване">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">НАСТАНЯВАНЕ</p>
+          <h2 class="section-title">Комфорт, тишина и планински уют</h2>
+          <p class="section-sub">
+            Избери вариант за престой — вилата като цяло или отделни стаи. Всичко е на една крачка от природата.
+          </p>
+        </header>
+
+        <div class="stay-grid">
+          <a class="stay-card" href="#stay" data-stay-go="0">
+            <div class="stay-card__kicker">Опция 1</div>
+            <h3 class="stay-card__title">Вилата</h3>
+            <p class="stay-card__text">Идеална за компании и семейства — простор, двор и усещане за уединение.</p>
+            <span class="stay-card__cta">Виж детайли →</span>
+          </a>
+
+          <a class="stay-card" href="#stay" data-stay-go="1">
+            <div class="stay-card__kicker">Опция 2</div>
+            <h3 class="stay-card__title">Стаи &amp; удобства</h3>
+            <p class="stay-card__text">2 двойни • 2 тройни • механа • SPA • джакузи • басейн • BBQ</p>
+            <span class="stay-card__cta">Виж детайли →</span>
+          </a>
+        </div>
+
+        <!-- STAY SHOW -->
+        <div class="stay-show" id="stayShow" aria-label="Информация за настаняване">
+          <div class="stay-show__top">
+            <div class="stay-tabs" role="tablist" aria-label="Категории">
+              <button class="stay-tab is-active" type="button" role="tab" aria-selected="true" data-stay-tab="0">Вилата</button>
+              <button class="stay-tab" type="button" role="tab" aria-selected="false" data-stay-tab="1">Стаи</button>
+              <button class="stay-tab" type="button" role="tab" aria-selected="false" data-stay-tab="2">Цени</button>
+              <button class="stay-tab" type="button" role="tab" aria-selected="false" data-stay-tab="3">Правила</button>
+            </div>
+
+            <div class="stay-arrows" aria-label="Навигация">
+              <button class="stay-arrow" type="button" aria-label="Назад" data-stay-prev>‹</button>
+              <button class="stay-arrow" type="button" aria-label="Напред" data-stay-next>›</button>
+            </div>
+          </div>
+
+          <div class="stay-viewport">
+            <div class="stay-track" id="stayTrack">
+              <article class="stay-slide is-active" role="tabpanel" aria-label="Вилата">
+                <div class="stay-slide__grid">
+                  <div class="stay-card2">
+                    <p class="stay-badge">VILLA VILEKULA</p>
+                    <h3 class="stay-h">Планински дом за пълно изключване</h3>
+                    <p class="stay-p">
+                      Вила с уютен интериор, дърво и топли тонове – създадена за семейства и приятели,
+                      които търсят тишина, природа и истински релакс.
+                    </p>
+                    <ul class="stay-list">
+                      <li><strong>Локация:</strong> спокойна планинска зона, близо до пътеки и природа</li>
+                      <li><strong>Подходяща за:</strong> семейства, компании, уикенд бягства</li>
+                      <li><strong>Защо да сте наши гости:</strong> уединение, SPA моменти, BBQ вечери</li>
+                    </ul>
+                    <div class="stay-ctaRow">
+                      <a class="btn btn-light" href="#booking">Запази дати <span class="btn-ic">▶</span></a>
+                      <a class="btn btn-ghost" href="#gallery">Виж снимки</a>
+                    </div>
+                  </div>
+
+                  <div class="stay-card2 stay-card2--accent">
+                    <div class="stay-quote">
+                      <div class="stay-quote__mark">“</div>
+                      <p class="stay-quote__text">Топлина, уют и природа — място, на което се връщаш.</p>
+                      <p class="stay-quote__meta">Mountain • SPA • BBQ</p>
+                    </div>
+
+                    <div class="stay-facts">
+                      <div class="fact">
+                        <div class="fact__v">2+</div>
+                        <div class="fact__l">Зони за релакс</div>
+                      </div>
+                      <div class="fact">
+                        <div class="fact__v">BBQ</div>
+                        <div class="fact__l">Покрита зона</div>
+                      </div>
+                      <div class="fact">
+                        <div class="fact__v">SPA</div>
+                        <div class="fact__l">Джакузи моменти</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="stay-slide" role="tabpanel" aria-label="Стаи">
+                <div class="stay-card2">
+                  <p class="stay-badge">СТАИ &amp; УДОБСТВА</p>
+                  <h3 class="stay-h">Комфорт за групи и семейства</h3>
+                  <p class="stay-p">Разпределение, което позволява и общи моменти, и лично пространство.</p>
+
+                  <div class="amen-grid">
+                    <div class="amen"><div class="amen__t">Стаи</div><div class="amen__p">2 двойни • 2 тройни</div></div>
+                    <div class="amen"><div class="amen__t">Механа</div><div class="amen__p">за дълги вечери</div></div>
+                    <div class="amen"><div class="amen__t">Джакузи</div><div class="amen__p">релакс зона</div></div>
+                    <div class="amen"><div class="amen__t">Басейн</div><div class="amen__p">лято и прохлада</div></div>
+                    <div class="amen"><div class="amen__t">SPA</div><div class="amen__p">тишина и възстановяване</div></div>
+                    <div class="amen"><div class="amen__t">BBQ</div><div class="amen__p">покрита зона</div></div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="stay-slide" role="tabpanel" aria-label="Цени">
+                <div class="stay-card2">
+                  <p class="stay-badge">ЦЕНИ</p>
+                  <h3 class="stay-h">Избери пакет за престой</h3>
+                  <p class="stay-p">
+                    Примерни цени (можеш да ги смениш по всяко време). Пакетите са удобни за уикенд и по-дълга почивка.
+                  </p>
+
+                  <div class="price-bubbles">
+                    <div class="price-bubble">
+                      <div class="tape">ПАКЕТ</div>
+                      <div class="pb-days">1 нощувка</div>
+                      <div class="pb-price">100€</div>
+                      <div class="pb-note">идеално за бърз уикенд</div>
+                    </div>
+
+                    <div class="price-bubble price-bubble--best">
+                      <div class="tape">ТОП</div>
+                      <div class="pb-days">2 нощувки</div>
+                      <div class="pb-price">189€</div>
+                      <div class="pb-note">най-избиран пакет</div>
+                    </div>
+
+                    <div class="price-bubble">
+                      <div class="tape">SAVE</div>
+                      <div class="pb-days">3 нощувки</div>
+                      <div class="pb-price">240€</div>
+                      <div class="pb-note">повече време за релакс</div>
+                    </div>
+                  </div>
+
+                  <div class="stay-ctaRow">
+                    <a class="btn btn-light" href="#booking">Запази дати <span class="btn-ic">▶</span></a>
+                    <a class="btn btn-ghost" href="#contact">Питай за оферта</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="stay-slide" role="tabpanel" aria-label="Правила">
+                <div class="stay-card2">
+                  <p class="stay-badge">ПРАВИЛА</p>
+                  <h3 class="stay-h">За да е приятно за всички</h3>
+                  <p class="stay-p">Кратки правила за спокойствие, чистота и добър престой.</p>
+
+                  <ul class="rules">
+                    <li><span class="dot"></span> Тишина след 23:00</li>
+                    <li><span class="dot"></span> Пази чистота в общите части</li>
+                    <li><span class="dot"></span> Ползване на SPA/басейн според указанията на място</li>
+                    <li><span class="dot"></span> Домашни любимци — по предварителна уговорка</li>
+                    <li><span class="dot"></span> Пушене — само на определени места</li>
+                  </ul>
+
+                  <div class="stay-ctaRow">
+                    <a class="btn btn-ghost" href="#contact">Свържи се с нас</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="stay-dots" id="stayDots" aria-hidden="true">
+            <button class="stay-dot is-active" type="button" data-stay-dot="0"></button>
+            <button class="stay-dot" type="button" data-stay-dot="1"></button>
+            <button class="stay-dot" type="button" data-stay-dot="2"></button>
+            <button class="stay-dot" type="button" data-stay-dot="3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <section class="section section-spa" id="spa" aria-label="SPA и релакс">
+    <div class="container">
+  
+      <header class="section-head">
+        <p class="eyebrow">SPA & RELAX</p>
+        <h2 class="section-title">Тишина, вода и топлина</h2>
+        <p class="section-sub">
+          Пространство за изключване от ежедневието — вода, пара и спокойствие.
+        </p>
+      </header>
+  
+      <div class="spa-hero">
+        <div class="spa-hero__img">
+          <img src="img/basein.webp" alt="Басейн" />
+        </div>
+  
+        <div class="spa-hero__content">
+          <p class="spa-badge">RELAX ZONE</p>
+          <h3 class="spa-title">Моменти само за теб</h3>
+  
+          <p class="spa-text">
+            Наслади се на топло джакузи, освежаващ басейн и уютна релакс зона.
+            Вила Vilekula съчетава планински въздух и SPA удоволствие.
+          </p>
+  
+          <ul class="spa-list">
+            <li>Отопляем басейн</li>
+            <li>Джакузи зона</li>
+            <li>Механа и камина</li>
+            <li>Покрита BBQ зона</li>
+          </ul>
+  
+          <a href="#booking" class="btn btn-light">
+            Запази релакс <span class="btn-ic">▶</span>
+          </a>
+        </div>
+      </div>
+  
+      <div class="spa-features">
+        <div class="spa-card">
+          <img src="img/basein.webp" alt="">
+          <h4>Басейн</h4>
+          <p>Лятна прохлада и спокойствие в природна среда.</p>
+        </div>
+  
+        <div class="spa-card">
+          <img src="img/basein.webp" alt="">
+          <h4>Джакузи</h4>
+          <p>Топлина и релакс след дълга разходка.</p>
+        </div>
+  
+        <div class="spa-card">
+          <img src="img/basein.webp" alt="">
+          <h4>Релакс зона</h4>
+          <p>Място за разговори, вино и тишина.</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+
+  <section class="section section-exp" id="experiences" aria-label="Преживявания">
+    <div class="container">
+  
+      <header class="section-head">
+        <p class="eyebrow">ПРЕЖИВЯВАНИЯ</p>
+        <h2 class="section-title">Вкус, вода, разходки и усмивки</h2>
+        <p class="section-sub">
+          Малки моменти, които правят престоя специален — избери какво ти се прави днес.
+        </p>
+      </header>
+  
+      <!-- Cinematic Grid -->
+      <div class="exp-grid" aria-label="Категории преживявания">
+        <a class="exp-card is-active" href="#bbq" data-exp-card="bbq" style="--bg:url('img/bbq.webp')">
+          <div class="exp-card__overlay"></div>
+          <div class="exp-card__content">
+            <div class="exp-card__kicker">ВЕЧЕРИ НА ЖАР</div>
+            <h3 class="exp-card__title">BBQ зона</h3>
+            <p class="exp-card__text">Покрита зона, голяма маса и уютни вечери.</p>
+            <span class="exp-card__cta">Виж детайли →</span>
+          </div>
+        </a>
+  
+        <a class="exp-card" href="#pool" data-exp-card="pool" style="--bg:url('img/basein.webp')">
+          <div class="exp-card__overlay"></div>
+          <div class="exp-card__content">
+            <div class="exp-card__kicker">ЛЯТО И ТИШИНА</div>
+            <h3 class="exp-card__title">Басейн</h3>
+            <p class="exp-card__text">Кафе сутрин, вода следобед, прохлада вечер.</p>
+            <span class="exp-card__cta">Виж детайли →</span>
+          </div>
+        </a>
+  
+        <a class="exp-card" href="#trips" data-exp-card="trips" style="--bg:url('img/batunski-manastir.webp')">
+          <div class="exp-card__overlay"></div>
+          <div class="exp-card__content">
+            <div class="exp-card__kicker">НА КРАЧКА ОТ ПРИРОДАТА</div>
+            <h3 class="exp-card__title">Разходки</h3>
+            <p class="exp-card__text">Пътеки, въздух и близки маршрути.</p>
+            <span class="exp-card__cta">Виж детайли →</span>
+          </div>
+        </a>
+  
+        <a class="exp-card" href="#kids" data-exp-card="kids" style="--bg:url('img/basein.webp')">
+          <div class="exp-card__overlay"></div>
+          <div class="exp-card__content">
+            <div class="exp-card__kicker">ЗА МАЛКИТЕ ГОСТИ</div>
+            <h3 class="exp-card__title">Детски кът</h3>
+            <p class="exp-card__text">Игри, смях и безопасно пространство.</p>
+            <span class="exp-card__cta">Виж детайли →</span>
+          </div>
+        </a>
+      </div>
+  
+      <!-- Detail Panel (opens on click) -->
+      <div class="exp-detail" id="expDetail" aria-label="Детайли за преживявания">
+        <div class="exp-tabs" role="tablist" aria-label="Табове преживявания">
+          <button class="exp-tab is-active" type="button" role="tab" aria-selected="true" data-exp-tab="bbq">BBQ</button>
+          <button class="exp-tab" type="button" role="tab" aria-selected="false" data-exp-tab="pool">Басейн</button>
+          <button class="exp-tab" type="button" role="tab" aria-selected="false" data-exp-tab="trips">Разходки</button>
+          <button class="exp-tab" type="button" role="tab" aria-selected="false" data-exp-tab="kids">Детски кът</button>
+        </div>
+  
+        <div class="exp-panels">
+          <!-- BBQ -->
+          <article class="exp-panel is-active" role="tabpanel" data-exp-panel="bbq">
+            <div class="exp-panel__grid">
+              <div class="exp-panel__media">
+                <img src="img/bbq.webp" alt="BBQ зона" />
+              </div>
+              <div class="exp-panel__content">
+                <p class="exp-badge">BBQ зона</p>
+                <h3 class="exp-h">Вечери на жар и под звезди</h3>
+                <p class="exp-p">
+                  Любимата зона за компании — дълги разговори, аромат на гора и топла светлина.
+                </p>
+                <ul class="exp-list">
+                  <li><span class="dot"></span> Покрита зона за BBQ</li>
+                  <li><span class="dot"></span> Голяма маса за компания</li>
+                  <li><span class="dot"></span> Уютна атмосфера вечер</li>
+                </ul>
+                <div class="exp-actions">
+                  <a class="btn btn-light" href="#booking">Запази дати <span class="btn-ic">▶</span></a>
+                  <a class="btn btn-ghost" href="#gallery">Виж снимки</a>
+                </div>
+              </div>
+            </div>
+          </article>
+  
+          <!-- POOL -->
+          <article class="exp-panel" role="tabpanel" data-exp-panel="pool">
+            <div class="exp-panel__grid">
+              <div class="exp-panel__media">
+                <img src="img/basein.webp" alt="Басейн" />
+              </div>
+              <div class="exp-panel__content">
+                <p class="exp-badge">Басейн</p>
+                <h3 class="exp-h">Лято в latte цветове</h3>
+                <p class="exp-p">
+                  За сутрешно кафе и следобедно спокойствие — точно когато ти трябва.
+                </p>
+                <ul class="exp-list">
+                  <li><span class="dot"></span> Почивка край водата</li>
+                  <li><span class="dot"></span> Идеално за семейства</li>
+                  <li><span class="dot"></span> Тишина и планински въздух</li>
+                </ul>
+                <div class="exp-actions">
+                  <a class="btn btn-light" href="#booking">Запази уикенд <span class="btn-ic">▶</span></a>
+                  <a class="btn btn-ghost" href="#spa">Виж SPA</a>
+                </div>
+              </div>
+            </div>
+          </article>
+  
+          <!-- TRIPS -->
+          <article class="exp-panel" role="tabpanel" data-exp-panel="trips">
+            <div class="exp-panel__grid">
+              <div class="exp-panel__media">
+                <img src="img/batunski-manastir.webp" alt="Разходки" />
+              </div>
+              <div class="exp-panel__content">
+                <p class="exp-badge">Разходки</p>
+                <h3 class="exp-h">Пътеки и близки маршрути</h3>
+                <p class="exp-p">
+                  Кратки разходки или по-дълги маршрути — тук природата е най-добрият домакин.
+                </p>
+                <ul class="exp-list">
+                  <li><span class="dot"></span> Маршрути за различни нива</li>
+                  <li><span class="dot"></span> Гледки и свеж въздух</li>
+                  <li><span class="dot"></span> Идеално след SPA</li>
+                </ul>
+                <div class="exp-actions">
+                  <a class="btn btn-light" href="#location">Локация <span class="btn-ic">▶</span></a>
+                  <a class="btn btn-ghost" href="#contact">Питай ни</a>
+                </div>
+              </div>
+            </div>
+          </article>
+  
+          <!-- KIDS -->
+          <article class="exp-panel" role="tabpanel" data-exp-panel="kids">
+            <div class="exp-panel__grid">
+              <div class="exp-panel__media">
+                <img src="img/basein.webp" alt="Детски кът" />
+              </div>
+              <div class="exp-panel__content">
+                <p class="exp-badge">Детски кът</p>
+                <h3 class="exp-h">Място за игри и усмивки</h3>
+                <p class="exp-p">
+                  Докато големите си почиват — малките имат своя зона за забавление.
+                </p>
+                <ul class="exp-list">
+                  <li><span class="dot"></span> Безопасно пространство</li>
+                  <li><span class="dot"></span> Подходящо за семейства</li>
+                  <li><span class="dot"></span> Кът за игри и активности</li>
+                </ul>
+                <div class="exp-actions">
+                  <a class="btn btn-light" href="#booking">Запази дати <span class="btn-ic">▶</span></a>
+                  <a class="btn btn-ghost" href="#contact">Свържи се</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="section section-gallery" id="gallery" aria-label="Галерия">
+    <div class="container">
+  
+      <section class="vv-gal" >
+        <header class="vv-gal__head">
+          <p class="vv-gal__eyebrow">ГАЛЕРИЯ</p>
+          <h2 class="vv-gal__title">Снимки от Villa Vilekula</h2>
+          <p class="vv-gal__sub">Погледни атмосферата — топли тонове, природа и моменти за почивка.</p>
+        </header>
+      
+        <div class="vv-gal__filters" role="tablist" aria-label="Филтри галерия">
+          <button class="vv-gal__filter is-active" type="button" data-vv-filter="all" role="tab" aria-selected="true">Всички</button>
+          <button class="vv-gal__filter" type="button" data-vv-filter="bbq" role="tab" aria-selected="false">BBQ</button>
+          <button class="vv-gal__filter" type="button" data-vv-filter="pool" role="tab" aria-selected="false">Басейн</button>
+          <button class="vv-gal__filter" type="button" data-vv-filter="spa" role="tab" aria-selected="false">SPA</button>
+          <button class="vv-gal__filter" type="button" data-vv-filter="trips" role="tab" aria-selected="false">Разходки</button>
+          <button class="vv-gal__filter" type="button" data-vv-filter="kids" role="tab" aria-selected="false">Детски</button>
+        </div>
+      
+        <!-- GRID (не masonry columns) -->
+        <div class="vv-gal__grid" id="vvGalGrid" aria-label="Снимки">
+          <!-- CARD -->
+          <button class="vv-gal__card" type="button"
+                  data-vv="bbq"
+                  data-full="img/bbq.webp"
+                  data-caption="BBQ зона • вечери на жар">
+            <img src="img/bbq.webp" alt="BBQ зона" loading="lazy">
+            <span class="vv-gal__chip">BBQ</span>
+          </button>
+      
+          <button class="vv-gal__card is-tall" type="button"
+                  data-vv="pool"
+                  data-full="img/basein.webp"
+                  data-caption="Басейн • лято и тишина">
+            <img src="img/basein.webp" alt="Басейн" loading="lazy">
+            <span class="vv-gal__chip">БАСЕЙН</span>
+          </button>
+      
+          <button class="vv-gal__card" type="button"
+                  data-vv="trips"
+                  data-full="img/batunski-manastir.webp"
+                  data-caption="Разходки • близки маршрути">
+            <img src="img/batunski-manastir.webp" alt="Разходки" loading="lazy">
+            <span class="vv-gal__chip">РАЗХОДКИ</span>
+          </button>
+      
+          <button class="vv-gal__card is-wide" type="button"
+                  data-vv="spa"
+                  data-full="img/basein.webp"
+                  data-caption="SPA • релакс моменти">
+            <img src="img/basein.webp" alt="SPA" loading="lazy">
+            <span class="vv-gal__chip">SPA</span>
+          </button>
+      
+          <button class="vv-gal__card" type="button"
+                  data-vv="kids"
+                  data-full="img/basein.webp"
+                  data-caption="Детски кът • усмивки и игри">
+            <img src="img/basein.webp" alt="Детски кът" loading="lazy">
+            <span class="vv-gal__chip">ДЕТСКИ</span>
+          </button>
+      
+          <button class="vv-gal__card" type="button"
+                  data-vv="bbq"
+                  data-full="img/bbq.webp"
+                  data-caption="BBQ • уютна атмосфера">
+            <img src="img/bbq.webp" alt="BBQ атмосфера" loading="lazy">
+            <span class="vv-gal__chip">BBQ</span>
+          </button>
+      
+          <button class="vv-gal__card is-tall" type="button"
+                  data-vv="trips"
+                  data-full="img/batunski-manastir.webp"
+                  data-caption="Разходки • планински въздух">
+            <img src="img/batunski-manastir.webp" alt="Планински въздух" loading="lazy">
+            <span class="vv-gal__chip">РАЗХОДКИ</span>
+          </button>
+      
+          <button class="vv-gal__card" type="button"
+                  data-vv="spa"
+                  data-full="img/basein.webp"
+                  data-caption="SPA • тишина и вода">
+            <img src="img/basein.webp" alt="SPA тишина" loading="lazy">
+            <span class="vv-gal__chip">SPA</span>
+          </button>
+        </div>
+      
+        <!-- LIGHTBOX -->
+        <div class="vv-lb" id="vvLb" hidden aria-hidden="true">
+          <div class="vv-lb__backdrop" data-vv-close></div>
+      
+          <div class="vv-lb__modal" role="dialog" aria-modal="true" aria-label="Преглед на снимка">
+            <button class="vv-lb__btn vv-lb__btn--close" type="button" aria-label="Затвори" data-vv-close>✕</button>
+            <button class="vv-lb__btn vv-lb__btn--zoom" type="button" aria-label="Zoom" id="vvLbZoom">⤢</button>
+      
+            <button class="vv-lb__nav vv-lb__nav--prev" type="button" aria-label="Предишна" data-vv-prev>‹</button>
+            <button class="vv-lb__nav vv-lb__nav--next" type="button" aria-label="Следваща" data-vv-next>›</button>
+      
+            <div class="vv-lb__stage" id="vvLbStage">
+              <img class="vv-lb__img" id="vvLbImg" alt="">
+            </div>
+      
+            <div class="vv-lb__cap" id="vvLbCap"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vv-loc" id="location">
+        <div class="vv-loc__wrap">
+          <header class="vv-loc__head">
+            <p class="vv-loc__eyebrow">ЛОКАЦИЯ</p>
+            <h2 class="vv-loc__title">Къде се намира Villa Vilekula</h2>
+            <p class="vv-loc__sub">
+              Лесен достъп, спокойна природа и много места за разходки, хапване и преживявания наоколо.
+            </p>
+          </header>
+      
+          <div class="vv-loc__top">
+            <!-- MAP -->
+            <div class="vv-loc__mapcard">
+              <div class="vv-loc__map">
+                <iframe
+                  title="Villa Vilekula - Google Maps"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=42.6977,23.3219&z=13&output=embed">
+                </iframe>
+              </div>
+      
+              <div class="vv-loc__addr">
+                <div>
+                  <h3 class="vv-loc__addrTitle">Адрес</h3>
+                  <p class="vv-loc__addrText">
+                    Villa Vilekula<br>
+                    ул. „Лате“ 7, с. Зелен Дол, България<br>
+                    <span class="vv-loc__muted">Координати:</span> 42.6977, 23.3219
+                  </p>
+                </div>
+      
+                <div class="vv-loc__actions">
+                  <a class="vv-loc__btn vv-loc__btn--primary"
+                     href="https://www.google.com/maps"
+                     target="_blank" rel="noopener">
+                    Отвори в Google Maps
+                  </a>
+                  <button class="vv-loc__btn vv-loc__btn--ghost" type="button" id="vvCopyAddress">
+                    Копирай адрес
+                  </button>
+                </div>
+              </div>
+            </div>
+      
+            <!-- MINI INFO -->
+            <aside class="vv-loc__infocard">
+              <h3 class="vv-loc__infoTitle">Бързи ориентири</h3>
+      
+              <ul class="vv-loc__bullets">
+                <li><strong>Паркинг:</strong> на място</li>
+                <li><strong>Достъп:</strong> асфалт до вилата</li>
+                <li><strong>Магазини:</strong> 5–10 мин с кола</li>
+                <li><strong>Природа:</strong> пътеки, гледки, река</li>
+              </ul>
+      
+              <div class="vv-loc__note">
+                <span class="vv-loc__noteDot"></span>
+                <p>
+                  Идея: добави кратък текст с насоки (“след табелата завий…”) или линк към Waze.
+                </p>
+              </div>
+            </aside>
+          </div>
+      
+          <!-- NEARBY -->
+          <div class="vv-near">
+            <div class="vv-near__bar">
+              <h3 class="vv-near__title">Наблизо — идеи за разходки и места</h3>
+      
+              <div class="vv-near__filters" role="tablist" aria-label="Филтри наблизо">
+                <button class="vv-near__f is-active" type="button" data-near="all" role="tab" aria-selected="true">Всички</button>
+                <button class="vv-near__f" type="button" data-near="sights" role="tab" aria-selected="false">Забележителности</button>
+                <button class="vv-near__f" type="button" data-near="nature" role="tab" aria-selected="false">Природа</button>
+                <button class="vv-near__f" type="button" data-near="food" role="tab" aria-selected="false">Ресторанти</button>
+                <button class="vv-near__f" type="button" data-near="shops" role="tab" aria-selected="false">Магазини</button>
+              </div>
+            </div>
+      
+            <div class="vv-near__grid" id="vvNearGrid" aria-label="Наблизо карти">
+              <!-- JS will render -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vv-contact" id="contact">
+        <div class="vv-contact__wrap">
+          <header class="vv-contact__head">
+            <p class="vv-contact__eyebrow">КОНТАКТИ</p>
+            <h2 class="vv-contact__title">Свържи се с нас</h2>
+            <p class="vv-contact__sub">
+              Не се притеснявай да ни пишеш или звъннеш — насреща сме за въпроси, препоръки и резервации.
+            </p>
+          </header>
+      
+          <div class="vv-contact__grid">
+            <!-- LEFT: main contact card -->
+            <div class="vv-contact__card vv-contact__card--main">
+              <div class="vv-contact__row">
+                <div class="vv-contact__ic" aria-hidden="true">☎</div>
+                <div>
+                  <div class="vv-contact__label">Телефон</div>
+                  <a class="vv-contact__link" href="tel:+359888123456">+359 888 123 456</a>
+                  <div class="vv-contact__hint">Всеки ден • 09:00–20:00</div>
+                </div>
+              </div>
+      
+              <div class="vv-contact__row">
+                <div class="vv-contact__ic" aria-hidden="true">✉</div>
+                <div>
+                  <div class="vv-contact__label">Имейл</div>
+                  <a class="vv-contact__link" href="mailto:hello@villavilekula.bg">hello@villavilekula.bg</a>
+                  <div class="vv-contact__hint">Отговаряме възможно най-бързо</div>
+                </div>
+              </div>
+      
+              <div class="vv-contact__row">
+                <div class="vv-contact__ic" aria-hidden="true">⌂</div>
+                <div>
+                  <div class="vv-contact__label">Адрес</div>
+                  <div class="vv-contact__text">
+                    Villa Vilekula, ул. „Лате“ 7,<br>
+                    с. Зелен Дол, България
+                  </div>
+                  <button class="vv-contact__copy" type="button" id="vvCopyContactAddr">
+                    Копирай адрес
+                  </button>
+                </div>
+              </div>
+      
+              <div class="vv-contact__divider"></div>
+      
+              <div class="vv-contact__small">
+                <div class="vv-contact__smallTitle">Бързи действия</div>
+                <div class="vv-contact__actions">
+                  <a class="vv-contact__btn vv-contact__btn--primary" href="#booking">Запитване / Резервация</a>
+                  <a class="vv-contact__btn vv-contact__btn--ghost" href="#location">Виж локация</a>
+                </div>
+              </div>
+            </div>
+      
+            <!-- RIGHT: socials -->
+            <aside class="vv-contact__card vv-contact__card--social">
+              <h3 class="vv-contact__socialTitle">Намери ни и тук</h3>
+              <p class="vv-contact__socialSub">
+                Пиши ни в удобно за теб приложение — бързо и лесно.
+              </p>
+      
+              <div class="vv-contact__socialGrid">
+                <a class="vv-social" href="#" target="_blank" rel="noopener">
+                  <span class="vv-social__ic" aria-hidden="true">◎</span>
+                  <span class="vv-social__name">Instagram</span>
+                  <span class="vv-social__meta">@villavilekula</span>
+                </a>
+      
+                <a class="vv-social" href="#" target="_blank" rel="noopener">
+                  <span class="vv-social__ic" aria-hidden="true">f</span>
+                  <span class="vv-social__name">Facebook</span>
+                  <span class="vv-social__meta">Villa Vilekula</span>
+                </a>
+      
+                <a class="vv-social" href="#" target="_blank" rel="noopener">
+                  <span class="vv-social__ic" aria-hidden="true">▶</span>
+                  <span class="vv-social__name">TikTok</span>
+                  <span class="vv-social__meta">@villavilekula</span>
+                </a>
+      
+                <a class="vv-social" href="#" target="_blank" rel="noopener">
+                  <span class="vv-social__ic" aria-hidden="true">in</span>
+                  <span class="vv-social__name">YouTube</span>
+                  <span class="vv-social__meta">Villa Vilekula</span>
+                </a>
+      
+                <a class="vv-social vv-social--wide" href="#" target="_blank" rel="noopener">
+                  <span class="vv-social__ic" aria-hidden="true">💬</span>
+                  <span class="vv-social__name">Viber / WhatsApp</span>
+                  <span class="vv-social__meta">Пиши ни директно</span>
+                </a>
+              </div>
+      
+              <div class="vv-contact__note">
+                <span class="vv-contact__dot" aria-hidden="true"></span>
+                <p>
+                  Ако не си сигурен кое е най-подходящо — просто ни звънни. Ще помогнем с всичко: условия, настаняване,
+                  маршрути, препоръки за разходки и заведения.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+      
+      
+      <section class="vv-book2" id="booking">
+        <div class="vv-book2__wrap">
+      
+          <header class="vv-book2__head">
+            <p class="vv-book2__eyebrow">РЕЗЕРВАЦИЯ</p>
+            <h2 class="vv-book2__title">Планирай своя престой</h2>
+            <p class="vv-book2__sub">
+              Избери дати и ни изпрати запитване. Ще ти потвърдим наличност.
+            </p>
+          </header>
+      
+          <form class="vv-book2__form" id="bookingForm2" novalidate>
+      
+            <div class="vv-book2__grid">
+      
+              <div class="vv-input">
+                <input type="text" name="name" required>
+                <label>Име</label>
+              </div>
+      
+              <div class="vv-input">
+                <input type="tel" name="phone" required>
+                <label>Телефон</label>
+              </div>
+      
+              <div class="vv-input">
+                <input type="email" name="email" required>
+                <label>Имейл</label>
+              </div>
+      
+              <div class="vv-input">
+                <input type="number" name="guests" min="1" required>
+                <label>Брой гости</label>
+              </div>
+      
+              <div class="vv-input">
+                <input type="date" name="from" required>
+                <label class="vv-label-static">Дата от</label>
+              </div>
+      
+              <div class="vv-input">
+                <input type="date" name="to" required>
+                <label class="vv-label-static">Дата до</label>
+              </div>
+      
+            </div>
+      
+            <div class="vv-input vv-input--full">
+              <textarea rows="4" name="message"></textarea>
+              <label>Допълнителна информация</label>
+            </div>
+      
+            <div class="vv-captcha">
+              <span>Колко е 1 + 2?</span>
+              <input type="number" id="captcha2" required>
+            </div>
+      
+            <button type="submit" class="vv-book2__btn">
+              Изпрати запитване
+            </button>
+      
+            <div class="vv-book2__success" id="bookingSuccess2">
+              ✓ Благодарим! Ще се свържем с теб скоро.
+            </div>
+      
+          </form>
+      
+        </div>
+      </section>
+
+      <!-- ================= FOOTER ================= -->
+<footer class="vv-footer">
+
+  <div class="vv-footer__wrap">
+
+    <!-- BRAND -->
+    <div class="vv-footer__brand">
+      <div class="vv-footer__logo">
+        VILLA VILEKULA
+      </div>
+      <p class="vv-footer__tag">
+        Mountain • SPA • BBQ
+      </p>
+      <p class="vv-footer__desc">
+        Топли цветове, планински уют и моменти,
+        които остават.
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="vv-footer__col">
+      <h4 class="vv-footer__title">Навигация</h4>
+      <a href="#home">Начало</a>
+      <a href="#stay">Настаняване</a>
+      <a href="#spa">SPA</a>
+      <a href="#experiences">Преживявания</a>
+      <a href="#gallery">Галерия</a>
+      <a href="#location">Локация</a>
+      <a href="#contacts">Контакти</a>
+      <a href="#booking">Запази дати</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="vv-footer__col">
+      <h4 class="vv-footer__title">Контакти</h4>
+      <p>+359 888 123 456</p>
+      <p>hello@villavilekula.bg</p>
+      <p>с. Зелен Дол, България</p>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="vv-footer__col">
+      <h4 class="vv-footer__title">Социални мрежи</h4>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">TikTok</a>
+      <a href="#">YouTube</a>
+    </div>
+
+  </div>
+
+  <div class="vv-footer__bottom">
+    © <span id="year"></span> Villa Vilekula • Всички права запазени
+  </div>
+
+  <div class="vv-footer__leaf" aria-hidden="true">
+    <img src="img/leaf-svgrepo-com(1).svg" alt="">
+  </div>
+
+
+</footer>
+
+
+  
+
+  <!-- LOADER -->
+  <div class="vv-loader" id="vvLoader" aria-label="Зареждане" role="status" aria-live="polite">
+    <div class="vv-loader__bg"></div>
+
+    <div class="vv-loader__orn vv-loader__orn--left" aria-hidden="true">
+      <img src="img/leaf-svgrepo-com(1).svg" alt="" />
+    </div>
+
+    <div class="vv-loader__orn vv-loader__orn--right" aria-hidden="true">
+      <img src="img/leaf-svgrepo-com(1).svg" alt="" />
+    </div>
+
+    <div class="vv-loader__card">
+      <div class="vv-loader__brand">VILLA VILEKULA</div>
+      <div class="vv-loader__sub">Зареждане…</div>
+
+      <div class="vv-loader__icon">
+        <img src="img/loader-svgrepo-com.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="vv.-scroll.js"></script>
+</body>
+</html>
